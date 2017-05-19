@@ -1,0 +1,31 @@
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<h1>Login</h1>
+<form action="/users/login" method="post">
+  <label for="email">Email:</label>
+  <input type="text" name="email"><br><br>
+  <label for="password">Password:</label>
+  <input type="password" name="password"><br><br>
+  <input type="submit" value="Login"><br>
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+</form>
+
+<br>
+
+<h1>Register</h1>
+<form action="/users" method="post">
+  <label for="name">Name:</label>
+  <input type="text" name="name"><br><br>
+  <label for="alias">Alias:</label>
+  <input type="text" name="alias"><br><br>
+  <label for="email">Email:</label>
+  <input type="text" name="email"><br><br>
+  <label for="password">Password:</label>
+  <input type="password" name="password"><br><br>
+  <label for="password_confirm">Confirm Password:</label>
+  <input type="password" name="password_confirm"><br><br>
+  <input type="submit" value="Register">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+</form>

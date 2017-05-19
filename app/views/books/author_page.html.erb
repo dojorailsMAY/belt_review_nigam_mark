@@ -1,0 +1,12 @@
+<nav>
+  <a href="/">Home</a>
+  <a href="/users/logout">Logout</a>
+</nav>
+
+<h1><%=@author.name%>'s Books</h1>
+
+<% @books.each do |book| %>
+<ul>
+  <li> <%=book.title%></li>
+</ul>
+<% end %>

@@ -1,0 +1,15 @@
+<nav>
+  <a href="/books/new">Add New Book</a>
+  <a href="/users/logout">Logout</a>
+  <a href="/users/edit">Edit Profile</a>
+</nav>
+
+<h4>Hello <%= session[:user_name] %></h4>
+<h1>All Books</h1>
+
+<% @books.each do |book| %>
+<ul>
+  <li><a href="books/<%= book.id %>"> <%=book.title %></a> : <a href="authors/<%= book.author.id%>"><%=book.author.name %></a></li>
+
+</ul>
+<% end %>
